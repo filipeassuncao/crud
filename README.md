@@ -13,7 +13,7 @@ Desafio backend Pleno.
 ## :arrow_down: Clonar Repositório
 
 ```bash
-    $ git clone https://github.com/filipeassuncao/backend.git
+    $ git clone https://github.com/filipeassuncao/crud.git
 ```
 ## :red_circle: Configuração
 
