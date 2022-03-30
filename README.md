@@ -43,7 +43,7 @@ Na primeira vez que for iniciar o container, na pasta raiz do projeto, rode o co
 ```bash
      $  docker-compose up --build -d
 ```
-Em seguida, execute o comando que irá realiza a instalação das depêndencias e executar o projeto:
+Em seguida, execute o comando que irá realizar a instalação das depêndencias e executar o projeto:
 ```bash
   $ docker exec -it backend /bin/bash ./start.sh
 ```
