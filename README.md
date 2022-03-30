@@ -48,7 +48,7 @@ Em seguida, execute o comando que irá realizar a instalação das depêndencias
   $ docker exec -it backend /bin/bash ./start.sh
 ```
 
-O terminal ficará ocupado e vc poderá acessar o projeto.
+O terminal ficará em uso.
 
 **(opcional)** Caso deseje executar novamente os testes, abra outra aba no terminal e entre novamente no container:
 
