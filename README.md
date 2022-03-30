@@ -25,24 +25,39 @@ Desafio backend Pleno.
 
 ### Executando:
 
-Na primeira vez que for iniciar o container, rode o comando que irá realizar a configuração do ambiente onde será executado a aplicação:
+**1º** Duplique o arquivo .env.example para um novo chamado ".env".
+
+**2º** Escolha um servidor de email de sua preferencia e preencha as variaveis de ambiente no arquivo .env com suas credencais.
+
+```bash
+    MAIL_MAILER
+    MAIL_HOST
+    MAIL_PORT
+    MAIL_USERNAME
+    MAIL_PASSWORD
+    MAIL_ENCRYPTION
+    MAIL_FROM_ADDRESS
+```
+
+
+**3º** Na primeira vez que for iniciar o container, rode o comando que irá realizar a configuração do ambiente onde será executado a aplicação:
 
 
 ```bash
     $ docker-compose up --build -d
 ```
 
-Para realizar as configurações e iniciar o projeto execute o comando:
+**4º** Para realizar as configurações e iniciar o projeto execute o comando:
 
 ```bash
      $ docker exec -it backend /bin/bash ./start.sh
 ```
-Caso deseje executar novamente os testes, abra outra aba no terminal e entre novamente no container:
+**(opcional)** Caso deseje executar novamente os testes, abra outra aba no terminal e entre novamente no container:
 
 ```bash
-     $ docker exec -it backend /bin/bash
+     $ docker exec -it backend /bin/bash 
 ```
-Para executar todos os testes do projeto e verificar a **COBERTURA DE TESTES (COVERAGE)** execute o comando:
+**(opcional)** Para executar todos os testes do projeto e verificar a **COBERTURA DE TESTES (COVERAGE)** execute o comando:
 ```bash
      $ composer test
 ```
