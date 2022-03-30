@@ -38,20 +38,50 @@ Desafio backend Pleno.
     MAIL_ENCRYPTION
     MAIL_FROM_ADDRESS
 ```
+----------------------------------
+## Linux
 
-
-**3º** Na primeira vez que for iniciar o container, na pasta raiz do projeto, rode o comando que irá realizar a configuração do ambiente onde será executado a aplicação:
+**1º** Na primeira vez que for iniciar o container, na pasta raiz do projeto, rode o comando que irá realizar a configuração do ambiente e iniciar a aplicação:
 
 
 ```bash
-    $ docker-compose up --build -d
+    $ make buildd
 ```
 
-**4º** Para realizar as configurações e iniciar o projeto execute o comando:
+----------------------------------
+
+## Windows
+
+**4º** Para realizar as configurações e iniciar o projeto execute o comando para entrar no container:
 
 ```bash
-     $ docker exec -it backend /bin/bash ./start.sh
+     $ docker exec -it backend /bin/bash
 ```
+Instale as dependências:
+```bash
+     $ composer install
+```
+Execute as migrations:
+```bash
+     $ php artisan migrate
+```
+Gere a documentação Swagger:
+```bash
+     php artisan l5-swagger:generate
+```
+
+Rode os testes:
+```bash
+     composer test
+```
+
+Inicie a aplicação:
+```bash
+      php artisan queue:work & php artisan serve --host=0.0.0.0 --port=80
+```
+
+----------------------------------
+
 **(opcional)** Caso deseje executar novamente os testes, abra outra aba no terminal e entre novamente no container:
 
 ```bash

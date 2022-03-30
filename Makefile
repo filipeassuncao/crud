@@ -9,7 +9,7 @@ downs:
 build:
 	docker-compose up --build
 buildd:
-	docker-compose up --build -d
+	docker exec -it backend /bin/bash ./start.sh
 sh:
 	docker exec -it backend /bin/bash
 install:
