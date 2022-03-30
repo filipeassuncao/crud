@@ -40,7 +40,7 @@ Desafio backend Pleno.
 ```
 
 
-**3º** Na primeira vez que for iniciar o container, rode o comando que irá realizar a configuração do ambiente onde será executado a aplicação:
+**3º** Na primeira vez que for iniciar o container, na pasta raiz do projeto, rode o comando que irá realizar a configuração do ambiente onde será executado a aplicação:
 
 
 ```bash
