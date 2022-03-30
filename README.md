@@ -52,7 +52,7 @@ Desafio backend Pleno.
 
 ## Windows
 
-**4º** Para realizar as configurações e iniciar o projeto execute o comando para entrar no container:
+Para realizar as configurações e iniciar o projeto execute o comando para entrar no container:
 
 ```bash
      $ docker exec -it backend /bin/bash
