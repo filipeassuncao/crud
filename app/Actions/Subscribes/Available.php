@@ -3,13 +3,8 @@
 namespace App\Actions\Subscribes;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\SubscribeRequest;
 use App\Jobs\AvailableCakeEmailJob;
-use App\Models\Cake;
-use App\Notifications\AvailableCakeNotification;
 use App\Traits\Response;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Notification;
 
 class Available extends Controller
 {
