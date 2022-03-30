@@ -29,7 +29,7 @@ class Available extends Controller
      *   summary="Disparo de emails informando a disponibilidade dos bolos para emails inscritos",
      *   description="É realizado o disparo de email em massa para para os emails inscritos na atualização
       de disponibilidade de um bolo cadastrado.",
-     *   path="/api/cake/send-email/available",
+     *   path="/api/cakes/send-email/available",
      *   @OA\Response(
      *      response=200,
      *      description="Envio de email em massa.",

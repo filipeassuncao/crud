@@ -15,4 +15,4 @@ Route::get('cake/{id}', Show::class)->where('id', '[0-9]+');;
 Route::delete('cake/{id}', Destroy::class)->where('id', '[0-9]+');;
 Route::put('cake/{id}', Update::class)->where('id', '[0-9]+');;
 Route::post('cake/{id}/subscribe', Subscribe::class)->where('id', '[0-9]+');
-Route::post('cake/send-email/available', Available::class);
+Route::post('cakes/send-email/available', Available::class);
