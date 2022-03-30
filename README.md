@@ -63,29 +63,7 @@ Para realizar as configurações e iniciar o projeto:
 ```
 Execute o comando para entrar no container:
 ```bash
-  $ docker exec -it backend /bin/bash
-```
-Instale as dependências:
-```bash
-     $ composer install
-```
-Execute as migrations:
-```bash
-     $ php artisan migrate
-```
-Gere a documentação Swagger:
-```bash
-     php artisan l5-swagger:generate
-```
-
-Rode os testes:
-```bash
-     composer test
-```
-
-Inicie a aplicação:
-```bash
-      php artisan queue:work & php artisan serve
+  $ docker exec -it backend /bin/bash ./start.sh
 ```
 
 ----------------------------------
