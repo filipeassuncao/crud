@@ -41,21 +41,23 @@ Desafio backend Pleno.
 Na primeira vez que for iniciar o container, na pasta raiz do projeto, rode o comando que irá realizar a configuração do ambiente da aplicação:
 
 ```bash
-     $  docker-compose up --build -d
+    $  docker-compose up --build -d
 ```
 Em seguida, execute o comando que irá realizar a instalação das depêndencias e executar o projeto:
 ```bash
   $ docker exec -it backend /bin/bash ./start.sh
 ```
 
+O terminal ficará ocupado e vc poderá acessar o projeto.
+
 **(opcional)** Caso deseje executar novamente os testes, abra outra aba no terminal e entre novamente no container:
 
 ```bash
-     $ docker exec -it backend /bin/bash 
+    $ docker exec -it backend /bin/bash 
 ```
 **(opcional)** Para executar todos os testes do projeto e verificar a **COBERTURA DE TESTES (COVERAGE)** execute o comando:
 ```bash
-     $ composer test
+    $ composer test
 ```
 
 
