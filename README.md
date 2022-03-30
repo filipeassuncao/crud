@@ -38,12 +38,12 @@ Desafio backend Pleno.
     MAIL_ENCRYPTION
     MAIL_FROM_ADDRESS
 ```
-Na primeira vez que for iniciar o container, na pasta raiz do projeto, rode o comando que irá realizar a configuração do ambiente da aplicação:
+**3º** Na primeira vez que for iniciar o container, na pasta raiz do projeto, rode o comando que irá realizar a configuração do ambiente da aplicação:
 
 ```bash
     $  docker-compose up --build -d
 ```
-Em seguida, execute o comando que irá realizar a instalação das depêndencias e executar o projeto:
+**4º** Em seguida, execute o comando que irá realizar a instalação das depêndencias e executar o projeto:
 ```bash
   $ docker exec -it backend /bin/bash ./start.sh
 ```
