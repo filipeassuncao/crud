@@ -40,11 +40,10 @@ Desafio backend Pleno.
 ```
 Na primeira vez que for iniciar o container, na pasta raiz do projeto, rode o comando que irá realizar a configuração do ambiente da aplicação:
 
-
 ```bash
      $  docker-compose up --build -d
 ```
-Execute o comando para entrar no container:
+Em seguida, execute o comando que irá realiza a instalação das depêndencias e executar o projeto:
 ```bash
   $ docker exec -it backend /bin/bash ./start.sh
 ```
