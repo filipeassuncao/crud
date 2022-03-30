@@ -6,9 +6,9 @@ down:
 	docker-compose down
 downs:
 	docker-compose down --remove-orphans
-build:
-	docker-compose up --build
 buildd:
+	docker-compose up --build -d
+exec:
 	docker exec -it backend /bin/bash ./start.sh
 sh:
 	docker exec -it backend /bin/bash

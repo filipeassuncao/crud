@@ -41,11 +41,15 @@ Desafio backend Pleno.
 ----------------------------------
 ## Linux
 
-**1º** Na primeira vez que for iniciar o container, na pasta raiz do projeto, rode o comando que irá realizar a configuração do ambiente e iniciar a aplicação:
+**1º** Na primeira vez que for iniciar o container, na pasta raiz do projeto, rode o comando que irá realizar a configuração do ambiente da aplicação:
 
 
 ```bash
     $ make buildd
+```
+**1º** Em seguida, execute o comando para executar a aplicação:
+```bash
+    $ make exec
 ```
 
 ----------------------------------
