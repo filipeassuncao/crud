@@ -63,7 +63,7 @@ Desafio backend Pleno.
 ```
 
 
-## :white_circle: Acesso
+## :purple_circle: Acesso
 
 1 - Acesse no seu browser http://localhost:6001
 
