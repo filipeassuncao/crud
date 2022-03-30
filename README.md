@@ -56,10 +56,14 @@ Em seguida, execute o comando para executar a aplicação:
 
 ## Windows
 
-Para realizar as configurações e iniciar o projeto execute o comando para entrar no container:
+Para realizar as configurações e iniciar o projeto:
 
 ```bash
-     $ docker exec -it backend /bin/bash
+     $  docker-compose up --build -d
+```
+Execute o comando para entrar no container:
+```bash
+  $ docker exec -it backend /bin/bash
 ```
 Instale as dependências:
 ```bash
