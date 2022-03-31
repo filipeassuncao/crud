@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Actions\Cakes;
+namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CakeRequest;
@@ -398,7 +398,7 @@ class CakeController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function __invodeleke(int $id)
+    public function destroy(int $id)
     {
         $cake = Cake::find($id);
 

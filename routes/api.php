@@ -1,18 +1,12 @@
 <?php
 
-use App\Actions\Cakes\Create;
-use App\Actions\Cakes\Destroy;
-use App\Actions\Cakes\Index;
-use App\Actions\Cakes\Show;
-use App\Actions\Cakes\Update;
-use App\Actions\Subscribes\Available;
-use App\Actions\Subscribes\Subscribe;
+use App\Http\Controllers\Api\V1\CakeController;
 use Illuminate\Support\Facades\Route;
 
-Route::post('cake', Create::class);
-Route::get('cakes/{page?}', Index::class);
-Route::get('cake/{id}', Show::class)->where('id', '[0-9]+');;
-Route::delete('cake/{id}', Destroy::class)->where('id', '[0-9]+');;
-Route::put('cake/{id}', Update::class)->where('id', '[0-9]+');;
-Route::post('cake/{id}/subscribe', Subscribe::class)->where('id', '[0-9]+');
-Route::post('cakes/send-email/available', Available::class);
+Route::post('cake', [CakeController::class, 'create']);
+Route::get('cakes/{page?}', [CakeController::class, 'index']);
+Route::get('cake/{id}', [CakeController::class, 'show'])->where('id', '[0-9]+');;
+Route::delete('cake/{id}', [CakeController::class, 'destroy'])->where('id', '[0-9]+');;
+Route::put('cake/{id}', [CakeController::class, 'update'])->where('id', '[0-9]+');;
+Route::post('cake/{id}/subscribe', [SubscribeController::class, 'create'])->where('id', '[0-9]+');
+Route::post('cakes/send-email/available', [SubscribeController::class, 'sendEmailAvailableCakes']);
