@@ -21,7 +21,7 @@ class AvailableTest extends TestCase
         $cake = Cake::factory()->create();
         Subscribe::factory()->create(['cake_id' => $cake->id]);
 
-        $this->post('/api/cake/send-email/available')
+        $this->post('/api/cakes/send-email/available')
         ->assertSuccessful()
         ->assertJson([
             "sucess" => "true",

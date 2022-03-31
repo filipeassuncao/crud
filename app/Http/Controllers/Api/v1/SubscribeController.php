@@ -12,10 +12,10 @@ use App\Traits\Response;
 class SubscribeController extends Controller
 {
     use Response;
-  /**
-   * Construtor
-   *
-   */
+
+    /**
+     * Undocumented function
+    */
     public function __construct()
     {
 

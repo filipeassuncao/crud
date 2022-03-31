@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Api\V1\CakeController;
+use App\Http\Controllers\Api\v1\CakeController;
+use App\Http\Controllers\Api\v1\SubscribeController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('cake', [CakeController::class, 'create']);

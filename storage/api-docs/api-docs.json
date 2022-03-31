@@ -22,7 +22,7 @@
                 ],
                 "summary": "Cadastrar um bolo",
                 "description": "Retorna um bolo cadastrado",
-                "operationId": "d63f8aeabc0fe194edc3d95b0011b1be",
+                "operationId": "84f14d8ac8e3113f66e5f6e2a80838d7",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -120,6 +120,111 @@
                 }
             }
         },
+        "/api/cakes": {
+            "get": {
+                "tags": [
+                    "cake"
+                ],
+                "summary": "Listar todos os bolos",
+                "description": "Retorna uma lista com os bolos cadastrados",
+                "operationId": "abac2456331ac487e2d814838ffb74f7",
+                "responses": {
+                    "200": {
+                        "description": "Listagem de bolos cadastrados",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "properties": {
+                                                "": {
+                                                    "$ref": "#/components/schemas/cake"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "example": {
+                                    "sucess": "true",
+                                    "data": [
+                                        {
+                                            "id": 2,
+                                            "uuid": "27eba493-58e0-47d2-9cbb-e510ee2d6a64",
+                                            "name": "bolo de chocolate",
+                                            "weight": "15.00",
+                                            "price": "5.00",
+                                            "available_quantity": 1,
+                                            "deleted_at": null,
+                                            "created_at": "2022-03-28T22:24:57.000000Z",
+                                            "updated_at": "2022-03-29T00:17:41.000000Z"
+                                        },
+                                        {
+                                            "id": 1037,
+                                            "uuid": "55a94567-147d-4354-bbbc-9397b263b153",
+                                            "name": "bolo de uva",
+                                            "weight": "18.00",
+                                            "price": "5.00",
+                                            "available_quantity": 1,
+                                            "deleted_at": null,
+                                            "created_at": "2022-03-29T10:26:31.000000Z",
+                                            "updated_at": "2022-03-29T10:26:31.000000Z"
+                                        },
+                                        {
+                                            "id": 1038,
+                                            "uuid": "77c44599-2030-46e4-a637-410734fa7ec9",
+                                            "name": "bolo de uva",
+                                            "weight": "18.00",
+                                            "price": "5.00",
+                                            "available_quantity": 1,
+                                            "deleted_at": null,
+                                            "created_at": "2022-03-29T10:48:12.000000Z",
+                                            "updated_at": "2022-03-29T10:48:12.000000Z"
+                                        }
+                                    ],
+                                    "links": {
+                                        "first": "http://localhost:6001/api/cakes?page=1",
+                                        "last": "http://localhost:6001/api/cakes?page=1",
+                                        "prev": null,
+                                        "next": null
+                                    },
+                                    "meta": {
+                                        "current_page": 1,
+                                        "from": 1,
+                                        "last_page": 1,
+                                        "links": [
+                                            {
+                                                "url": null,
+                                                "label": "&laquo; Anterior",
+                                                "active": false
+                                            },
+                                            {
+                                                "url": "http://localhost:6001/api/cakes?page=1",
+                                                "label": "1",
+                                                "active": true
+                                            },
+                                            {
+                                                "url": null,
+                                                "label": "Próximo &raquo;",
+                                                "active": false
+                                            }
+                                        ],
+                                        "path": "http://localhost:6001/api/cakes",
+                                        "per_page": 10,
+                                        "to": 3,
+                                        "total": 3
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/api/cake/{id}": {
             "get": {
                 "tags": [
@@ -127,7 +232,7 @@
                 ],
                 "summary": "Listar as informações de um bolo",
                 "description": "Retorna as informações de um bolo",
-                "operationId": "0d3895f94b95247301f61262c9e6a71d",
+                "operationId": "ac5797633d2c9ea4ab1671829b584a24",
                 "responses": {
                     "200": {
                         "description": "Informações de um bolo",
@@ -187,7 +292,7 @@
                 ],
                 "summary": "Atualizar informações de um bolo",
                 "description": "Retorna um bolo atualizado",
-                "operationId": "4312b1a100c481eb75a6acca955ec10a",
+                "operationId": "3b056f3d26ef33aa7c9f19b0ed60e4a8",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -300,7 +405,7 @@
                 ],
                 "summary": "Deletar um bolo",
                 "description": "Retorna um bolo deletado",
-                "operationId": "7a91489e15955bfde382e5d7f28a37eb",
+                "operationId": "75c1ca0bfc3ddb8bdac1148f1340d07a",
                 "responses": {
                     "200": {
                         "description": "Retorna as informações de um bolo deletado",
@@ -356,152 +461,6 @@
                 }
             }
         },
-        "/api/cakes": {
-            "get": {
-                "tags": [
-                    "cake"
-                ],
-                "summary": "Listar todos os bolos",
-                "description": "Retorna uma lista com os bolos cadastrados",
-                "operationId": "26eefd6a5eb9714f236211208d7e186f",
-                "responses": {
-                    "200": {
-                        "description": "Listagem de bolos cadastrados",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "success": {
-                                            "type": "string"
-                                        },
-                                        "data": {
-                                            "properties": {
-                                                "": {
-                                                    "$ref": "#/components/schemas/cake"
-                                                }
-                                            },
-                                            "type": "object"
-                                        }
-                                    },
-                                    "type": "object"
-                                },
-                                "example": {
-                                    "sucess": "true",
-                                    "data": [
-                                        {
-                                            "id": 2,
-                                            "uuid": "27eba493-58e0-47d2-9cbb-e510ee2d6a64",
-                                            "name": "bolo de chocolate",
-                                            "weight": "15.00",
-                                            "price": "5.00",
-                                            "available_quantity": 1,
-                                            "deleted_at": null,
-                                            "created_at": "2022-03-28T22:24:57.000000Z",
-                                            "updated_at": "2022-03-29T00:17:41.000000Z"
-                                        },
-                                        {
-                                            "id": 1037,
-                                            "uuid": "55a94567-147d-4354-bbbc-9397b263b153",
-                                            "name": "bolo de uva",
-                                            "weight": "18.00",
-                                            "price": "5.00",
-                                            "available_quantity": 1,
-                                            "deleted_at": null,
-                                            "created_at": "2022-03-29T10:26:31.000000Z",
-                                            "updated_at": "2022-03-29T10:26:31.000000Z"
-                                        },
-                                        {
-                                            "id": 1038,
-                                            "uuid": "77c44599-2030-46e4-a637-410734fa7ec9",
-                                            "name": "bolo de uva",
-                                            "weight": "18.00",
-                                            "price": "5.00",
-                                            "available_quantity": 1,
-                                            "deleted_at": null,
-                                            "created_at": "2022-03-29T10:48:12.000000Z",
-                                            "updated_at": "2022-03-29T10:48:12.000000Z"
-                                        }
-                                    ],
-                                    "links": {
-                                        "first": "http://localhost:6001/api/cakes?page=1",
-                                        "last": "http://localhost:6001/api/cakes?page=1",
-                                        "prev": null,
-                                        "next": null
-                                    },
-                                    "meta": {
-                                        "current_page": 1,
-                                        "from": 1,
-                                        "last_page": 1,
-                                        "links": [
-                                            {
-                                                "url": null,
-                                                "label": "&laquo; Anterior",
-                                                "active": false
-                                            },
-                                            {
-                                                "url": "http://localhost:6001/api/cakes?page=1",
-                                                "label": "1",
-                                                "active": true
-                                            },
-                                            {
-                                                "url": null,
-                                                "label": "Próximo &raquo;",
-                                                "active": false
-                                            }
-                                        ],
-                                        "path": "http://localhost:6001/api/cakes",
-                                        "per_page": 10,
-                                        "to": 3,
-                                        "total": 3
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        "/api/cake/send-email/available": {
-            "post": {
-                "tags": [
-                    "subscribe"
-                ],
-                "summary": "Disparo de emails informando a disponibilidade dos bolos para emails inscritos",
-                "description": "É realizado o disparo de email em massa para para os emails inscritos na atualização\n      de disponibilidade de um bolo cadastrado.",
-                "operationId": "7e46d0dddfc477fd9b403f7979ac4fa4",
-                "responses": {
-                    "200": {
-                        "description": "Envio de email em massa.",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "success": {
-                                            "type": "string"
-                                        },
-                                        "data": {
-                                            "properties": {
-                                                "message": {
-                                                    "type": "string"
-                                                }
-                                            },
-                                            "type": "object"
-                                        }
-                                    },
-                                    "type": "object"
-                                },
-                                "example": {
-                                    "success": "true",
-                                    "data": {
-                                        "message": "Disparo de emails iniciado com sucesso."
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
         "/api/cake/{id}/subscribe": {
             "post": {
                 "tags": [
@@ -509,7 +468,7 @@
                 ],
                 "summary": "Receber atualização de disponibilidade de um bolo",
                 "description": "É realizado a inscrição no bolo desejado para receber um email caso o bolo fique disponível.",
-                "operationId": "ad5220723840d9f2caf57179214ca612",
+                "operationId": "6247c97c4441132a36f16867e4abded5",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -620,6 +579,47 @@
                                                 ]
                                             }
                                         }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/cakes/send-email/available": {
+            "post": {
+                "tags": [
+                    "subscribe"
+                ],
+                "summary": "Disparo de emails informando a disponibilidade dos bolos para emails inscritos",
+                "description": "É realizado o disparo de email em massa para para os emails inscritos na atualização\n      de disponibilidade de um bolo cadastrado.",
+                "operationId": "5ab0d8daf11339fb7810f39c9125e179",
+                "responses": {
+                    "200": {
+                        "description": "Envio de email em massa.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "properties": {
+                                                "message": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "example": {
+                                    "success": "true",
+                                    "data": {
+                                        "message": "Disparo de emails iniciado com sucesso."
                                     }
                                 }
                             }

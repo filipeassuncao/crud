@@ -8,14 +8,16 @@ use App\Http\Requests\UpdateCakeRequest;
 use App\Http\Resources\CakeCollection;
 use App\Http\Resources\CakesResource;
 use App\Models\Cake;
+use App\Traits\Response;
 
 class CakeController extends Controller
 {
 
-  /**
-   * Construtor
-   *
-   */
+    use Response;
+    /**
+     * Construtor
+     *
+     */
     public function __construct()
     {
 
