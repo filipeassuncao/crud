@@ -8,6 +8,9 @@ use App\Jobs\AvailableCakeEmailJob;
 use App\Models\Cake;
 use App\Models\Subscribe as SubcribeModel;
 use App\Traits\Response;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Resources\Json\JsonResource;
+use Nette\Utils\Json;
 
 class SubscribeController extends Controller
 {
@@ -114,7 +117,7 @@ class SubscribeController extends Controller
             'data' => [
                 'message' =>  'Inscrição realizada com sucesso.'
             ]
-        ]);
+        ], JsonResponse::HTTP_CREATED);
     }
 
      /**

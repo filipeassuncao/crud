@@ -9,6 +9,7 @@ use App\Http\Resources\CakeCollection;
 use App\Http\Resources\CakesResource;
 use App\Models\Cake;
 use App\Traits\Response;
+use Illuminate\Http\JsonResponse;
 
 class CakeController extends Controller
 {
@@ -104,7 +105,7 @@ class CakeController extends Controller
         return response()->json([
             'success' => 'true',
             'data' => new CakesResource($cake)
-        ]);
+        ], JsonResponse::HTTP_CREATED);
     }
 
       /**
