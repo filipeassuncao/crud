@@ -29,7 +29,7 @@ class CakeController extends Controller
      *   tags={"cake"},
      *   summary="Cadastrar um bolo",
      *   description="Retorna um bolo cadastrado",
-     *   path="/api/cake",
+     *   path="/api/cakes",
      *   @OA\RequestBody(
      *       required=true,
      *       @OA\JsonContent(
@@ -208,7 +208,7 @@ class CakeController extends Controller
      *   tags={"cake"},
      *   summary="Listar as informações de um bolo",
      *   description="Retorna as informações de um bolo",
-     *   path="/api/cake/{id}",
+     *   path="/api/cakes/{id}",
      *   @OA\Response(
      *      response=200,
      *      description="Informações de um bolo",
@@ -266,7 +266,7 @@ class CakeController extends Controller
      *   tags={"cake"},
      *   summary="Atualizar informações de um bolo",
      *   description="Retorna um bolo atualizado",
-     *   path="/api/cake/{id}",
+     *   path="/api/cakes/{id}",
      *   @OA\RequestBody(
      *       required=true,
      *       @OA\JsonContent(
@@ -362,7 +362,7 @@ class CakeController extends Controller
      *   tags={"cake"},
      *   summary="Deletar um bolo",
      *   description="Retorna um bolo deletado",
-     *   path="/api/cake/{id}",
+     *   path="/api/cakes/{id}",
      *   @OA\Response(
      *      response=200,
      *      description="Retorna as informações de um bolo deletado",

@@ -29,7 +29,7 @@ class SubscribeController extends Controller
      *   tags={"subscribe"},
      *   summary="Receber atualização de disponibilidade de um bolo",
      *   description="É realizado a inscrição no bolo desejado para receber um email caso o bolo fique disponível.",
-     *   path="/api/cake/{id}/subscribe",
+     *   path="/api/cakes/{id}/subscribe",
     *    @OA\RequestBody(
      *       required=true,
      *       @OA\JsonContent(
